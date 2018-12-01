@@ -8,12 +8,14 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 typedef pair<int,int>ii;
-int ans,n;
+int ans,n,c;
 int main() {
     cin.sync_with_stdio(0);
     cin.tie(0);
-    while(cin>>n){
-        ans+=n;
+    n=953;
+    while(n--){
+        cin>>c;
+        ans+=c;
     }
     cout<<ans;
     return 0;
