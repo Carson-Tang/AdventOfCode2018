@@ -16,12 +16,12 @@ string s1,s3,s4,s5,s6,s7,s9,s10,ans;
 char s2,s8;
 bool openwork(){
     for(int i = 0; i < 5; i++){
-        if(work[i]==0) return true;
+        if(!work[i]) return true;
     } return false;
 }
 void givework(int cost){
     for(int i = 0; i < 5; i++){
-        if(work[i]==0){
+        if(!work[i]){
             work[i]=cost+60;
             task[i]=cost-1;
             return;
@@ -53,7 +53,7 @@ int main() {
     }
     while(cnt!=26){
         for(int i = 0; i < 26; i++){
-            if(indeg[i]==0&&!vis[i]&&openwork()){
+            if(!indeg[i]&&!vis[i]&&openwork()){
                 vis[i]=1;
                 givework(i+1);
             }
