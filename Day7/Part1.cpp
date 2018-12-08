@@ -8,9 +8,8 @@ typedef long long ll;
 typedef unsigned long long ull;
 typedef pair<int,int>ii;
 typedef pair<ll,int>lli;
-int n,indeg[27],cnt;
+int n,indeg[27],cnt,cur;
 bool vis[27];
-queue<int>q;
 vector<int>adj[27],topo;
 string s1,s3,s4,s5,s6,s7,s9,s10;
 char s2,s8;
@@ -28,16 +27,13 @@ int main() {
             if(indeg[i]==0&&!vis[i]){
                 cout<<(char)(i+65);
                 vis[i]=1;
-                q.push(i);
+                cur=i;
                 cnt++;
                 break;
             }
         }
-        while(!q.empty()){
-            int u = q.front(); q.pop();
-            for(int v : adj[u]){
-                indeg[v]--;
-            }
+        for(int v : adj[cur]){
+            indeg[v]--;
         }
     }
     return 0;
