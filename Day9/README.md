@@ -1,1 +1,1 @@
-#This was the worst day so far
+This was the worst day so far
