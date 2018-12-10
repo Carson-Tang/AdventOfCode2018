@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class main {
+public class Main {
     static class p {
         int x,y;
         p(int x, int y){ this.x=x; this.y=y; }
