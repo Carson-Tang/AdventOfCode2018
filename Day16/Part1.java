@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main2 {
+public class main {
     static int [] addr(){
         int [] ret = Arrays.copyOf(before,before.length);
         ret[c] = ret[a]+ret[b];
